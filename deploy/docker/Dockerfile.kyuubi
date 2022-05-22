@@ -1,0 +1,6 @@
+FROM openjdk:11-bullseye
+
+COPY cloudbeaver/deploy/cloudbeaver /opt/cloudbeaver
+EXPOSE 8978
+WORKDIR /opt/cloudbeaver/
+ENTRYPOINT ["./run-server.sh"]
