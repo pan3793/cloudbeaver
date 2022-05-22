@@ -25,7 +25,8 @@ echo "Pull cloudbeaver platform"
 cd ${PROJECT_HOME}/..
 
 echo "Pull dbeaver platform"
-[ ! -d dbeaver ] && git clone https://github.com/dbeaver/dbeaver.git
+[ ! -d dbeaver-common ] && git clone https://github.com/dbeaver/dbeaver-common.git -b release_23_3_5 --depth=1
+[ ! -d dbeaver ] && git clone https://github.com/dbeaver/dbeaver.git -b release_23_3_5 --depth=1
 
 cd "${PROJECT_HOME}/deploy"
 
