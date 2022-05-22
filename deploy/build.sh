@@ -20,7 +20,10 @@ mkdir ${PROJECT_HOME}/deploy/cloudbeaver/web
 echo "Clone dbeaver platform"
 
 cd ${PROJECT_HOME}/..
-[ ! -d dbeaver ] && git clone https://github.com/dbeaver/dbeaver.git
+[ ! -d dbeaver ] && \
+  wget https://github.com/dbeaver/dbeaver/archive/refs/heads/devel.zip && \
+  unzip devel.zip > /dev/null && \
+  mv dbeaver-devel dbeaver
 cd "${PROJECT_HOME}/deploy"
 
 echo "Build CloudBeaver server"
