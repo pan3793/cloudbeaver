@@ -1,9 +1,11 @@
 #!/bin/bash
 set -Eeuo pipefail
 
+PROJECT_HOME="$(cd "`dirname "$0"`"/..; pwd)"
+
 echo "Build static content"
 
-cd ../../cloudbeaver/webapp
+cd ${PROJECT_HOME}/webapp
 
 yarn
 yarn lerna run bootstrap
@@ -12,10 +14,10 @@ if [[ "$?" -ne 0 ]] ; then
   echo 'Application build failed'; exit $rc
 fi
 
-cd ../deploy
+cd ${PROJECT_HOME}/deploy
 
 echo "Copy static content"
 
-cp -rp ../webapp/packages/product-default/lib/* cloudbeaver/web
+cp -rp ${PROJECT_HOME}/webapp/packages/product-default/lib/* ${PROJECT_HOME}/deploy/cloudbeaver/web
 
 echo "Cloudbeaver is ready. Run run-server.bat in cloudbeaver folder to start the server."
