@@ -9,7 +9,7 @@ docker buildx create --platform linux/amd64,linux/arm64 --use
 git clone git@github.com:pan3793/cloudbeaver.git
 docker build cloudbeaver/deploy/docker -f cloudbeaver/deploy/docker/Dockerfile.builder -t pan3793/cloudbeaver-builder
 docker run --rm -v $PWD/cloudbeaver:/cloudbeaver pan3793/cloudbeaver-builder /cloudbeaver/deploy/build.sh
-docker buildx build . -f cloudbeaver/deploy/docker/Dockerfile.kyuubi -t pan3793/cloudbeaver:20220522 --platform=linux/amd64,linux/arm64 --push
+docker buildx build . -f cloudbeaver/deploy/docker/Dockerfile.kyuubi -t pan3793/cloudbeaver:20220526 --platform=linux/amd64,linux/arm64 --push
 ```
 
 # CloudBeaver Community
