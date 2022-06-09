@@ -21,9 +21,9 @@ echo "Clone dbeaver platform"
 
 cd ${PROJECT_HOME}/..
 [ ! -d dbeaver ] && \
-  wget https://github.com/dbeaver/dbeaver/archive/refs/heads/devel.zip && \
-  unzip devel.zip > /dev/null && \
-  mv dbeaver-devel dbeaver
+  wget https://github.com/dbeaver/dbeaver/archive/refs/tags/22.1.0.zip && \
+  unzip 22.1.0.zip > /dev/null && \
+  mv dbeaver-22.1.0 dbeaver
 cd "${PROJECT_HOME}/deploy"
 
 echo "Build CloudBeaver server"
