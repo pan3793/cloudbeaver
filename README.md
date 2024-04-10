@@ -1,8 +1,8 @@
-This fork is deprecated, CloudBeaver has built-in Apache Kyuubi support since 2024.0.2
-======================================================================================
+This fork is deprecated, CloudBeaver has built-in Apache Kyuubi support since 24.0.2
+====================================================================================
 See more details at https://github.com/dbeaver/cloudbeaver/pull/1336
 
---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 # Build and Push x86_64 & ARM64 platform images
 ```
